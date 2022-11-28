@@ -77,7 +77,7 @@ const PredictionCardContent = () => {
             <Text bold color="invertedContrast">
               {t('Play')}
             </Text>
-            <ArrowForwardIcon ml="4px" color="invertedContrast" />
+            <ArrowForwardIcon width="35px" ml="4px" color="invertedContrast" />
           </Button>
         </StyledLink>
       </Flex>

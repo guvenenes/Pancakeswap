@@ -51,34 +51,45 @@ const Home: React.FC<React.PropsWithChildren> = () => {
   const HomeSectionContainerStyles = { margin: '0', width: '100%', maxWidth: '968px' }
 
   const { t } = useTranslation()
+  const bgclr = '#133325'
+  const purple = `background: rgb(59,28,53);
+  background: linear-gradient(90deg, rgba(59,28,53,1) 0%, rgba(82,20,85,1) 100%);`
+  const green = `background: rgb(6,25,10);
+  background: radial-gradient(circle, rgba(6,25,10,0.01724439775910369) 0%, rgba(18,115,65,1) 100%);`
 
   return (
     <>
       <PageMeta />
       <style jsx global>{`
         #home-1 .page-bg {
-          background: linear-gradient(139.73deg, #e6fdff 0%, #f3efff 100%);
+          background: rgb(238, 174, 202);
+          background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
         }
         [data-theme='dark'] #home-1 .page-bg {
-          background: radial-gradient(103.12% 50% at 50% 50%, #21193a 0%, #191326 100%);
+          background: rgb(25, 93, 128);
+          background: linear-gradient(73deg, rgba(25, 93, 128, 0.9752275910364145) 0%, rgba(28, 59, 150, 1) 100%);
         }
         #home-2 .page-bg {
-          background: linear-gradient(180deg, #ffffff 22%, #d7caec 100%);
+          background: rgb(238, 174, 202);
+          background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
         }
         [data-theme='dark'] #home-2 .page-bg {
-          background: linear-gradient(180deg, #09070c 22%, #201335 100%);
+          background: rgb(25, 93, 128);
+          background: linear-gradient(73deg, rgba(25, 93, 128, 0.9752275910364145) 0%, rgba(28, 59, 150, 1) 100%);
         }
         #home-3 .page-bg {
-          background: linear-gradient(180deg, #6fb6f1 0%, #eaf2f6 100%);
+          background: rgb(238, 174, 202);
+          background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
         }
         [data-theme='dark'] #home-3 .page-bg {
-          background: linear-gradient(180deg, #0b4576 0%, #091115 100%);
+          background: rgb(25, 93, 128);
+          background: linear-gradient(73deg, rgba(25, 93, 128, 0.9752275910364145) 0%, rgba(28, 59, 150, 1) 100%);
         }
         #home-4 .inner-wedge svg {
-          fill: #d8cbed;
+          fill: white;
         }
         [data-theme='dark'] #home-4 .inner-wedge svg {
-          fill: #201335;
+          fill: black;
         }
       `}</style>
       <StyledHeroSection
@@ -109,7 +120,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
       </PageSection>
       <PageSection
         innerProps={{ style: HomeSectionContainerStyles }}
-        background={theme.colors.background}
+        background={bgclr}
         containerProps={{
           id: 'home-4',
         }}
@@ -125,9 +136,9 @@ const Home: React.FC<React.PropsWithChildren> = () => {
       </PageSection>
       <PageSection
         innerProps={{ style: HomeSectionContainerStyles }}
-        background={theme.colors.gradientCardHeader}
+        background={purple}
         index={2}
-        hasCurvedDivider={false}
+        hasCurvedDivider={true}
       >
         <OuterWedgeWrapper>
           <InnerWedgeWrapper width="150%" top>
@@ -144,6 +155,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
           id: 'home-3',
         }}
         index={2}
+        background={theme.colors.background}
         hasCurvedDivider={false}
       >
         <WinSection />

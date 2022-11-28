@@ -28,6 +28,8 @@ const NavWrapper = styled(Flex)`
   padding: 20px 16px;
   flex-direction: column;
   gap: 8px;
+  background: background: rgb(25, 93, 128);
+  background: linear-gradient(73deg, rgba(25, 93, 128, 0.9752275910364145) 0%, rgba(28, 59, 150, 1) 100%);
   ${({ theme }) => theme.mediaQueries.sm} {
     padding: 20px 40px;
     flex-direction: row;
@@ -68,7 +70,7 @@ const InfoNav: React.FC<{ isStableSwap: boolean }> = ({ isStableSwap }) => {
         </Box>
         {!account && <NetworkSwitcher activeIndex={activeIndex} />}
       </Flex>
-      <Box width={['100%', '100%', '250px']}>
+      <Box width={['100%', '100%', '260px']}>
         <Search />
       </Box>
     </NavWrapper>

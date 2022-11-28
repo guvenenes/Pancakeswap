@@ -49,8 +49,9 @@ export default function SwapTab({ children }) {
               <ButtonMenuItem
                 key={content}
                 style={{
-                  color: idx === swapTypeState ? theme.colors.text : theme.colors.textSubtle,
+                  color: 'yellow',
                   backgroundColor: idx === swapTypeState ? theme.card.background : theme.colors.input,
+                  fontFamily: 'Georgia, serif',
                 }}
               >
                 {content}

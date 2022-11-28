@@ -34,8 +34,11 @@ const Stats = () => {
   }
 
   return (
-    <Flex justifyContent="center" alignItems="center" flexDirection="column">
-      <GradientLogo height="48px" width="48px" mb="24px" />
+    <Flex justifyContent="center" alignItems="center" flexDirection="column" style={{}}>
+      <GradientLogo height="100px" width="100px" />
+      <Heading textAlign="center" scale="xl" color="black" mt="-30px" mb="30px">
+        {t('Welcome to the Darkside')}
+      </Heading>
       <Heading textAlign="center" scale="xl">
         {t('Used by millions.')}
       </Heading>
@@ -43,7 +46,7 @@ const Stats = () => {
         {t('Trusted with billions.')}
       </Heading>
       <Text textAlign="center" color="textSubtle">
-        {t('PancakeSwap has the most users of any decentralized platform, ever.')}
+        {t('Pancake has the most users of any decentralized platform, ever.')}
       </Text>
       <Flex flexWrap="wrap">
         <Text display="inline" textAlign="center" color="textSubtle" mb="20px">
@@ -58,21 +61,31 @@ const Stats = () => {
       </Text>
 
       <Flex flexDirection={['column', null, null, 'row']}>
-        <IconCard {...UsersCardData} mr={[null, null, null, '16px']} mb={['16px', null, null, '0']}>
+        <IconCard
+          {...UsersCardData}
+          mr={[null, null, null, '16px']}
+          mb={['16px', null, null, '0']}
+          style={{ borderRadius: '70px' }}
+        >
           <StatCardContent
             headingText={t('%users% users', { users })}
             bodyText={t('in the last 30 days')}
             highlightColor={theme.colors.secondary}
           />
         </IconCard>
-        <IconCard {...TradesCardData} mr={[null, null, null, '16px']} mb={['16px', null, null, '0']}>
+        <IconCard
+          {...TradesCardData}
+          mr={[null, null, null, '16px']}
+          mb={['16px', null, null, '0']}
+          style={{ borderRadius: '70px' }}
+        >
           <StatCardContent
             headingText={t('%trades% trades', { trades })}
             bodyText={t('made in the last 30 days')}
             highlightColor={theme.colors.primary}
           />
         </IconCard>
-        <IconCard {...StakedCardData}>
+        <IconCard {...StakedCardData} style={{ borderRadius: '70px' }}>
           <StatCardContent
             headingText={t('$%tvl% staked', { tvl: tvlString })}
             bodyText={t('Total Value Locked')}

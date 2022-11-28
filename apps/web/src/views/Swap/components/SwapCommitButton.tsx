@@ -269,6 +269,7 @@ export default function SwapCommitButton({
             }}
             width="48%"
             id="swap-button"
+            color="red"
             disabled={!isValid || approval !== ApprovalState.APPROVED || (priceImpactSeverity > 3 && !isExpertMode)}
           >
             {priceImpactSeverity > 3 && !isExpertMode

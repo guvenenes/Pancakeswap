@@ -32,7 +32,7 @@ export interface IconCardData {
   borderColor?: string
   rotation?: string
 }
-
+const red = 'red'
 const IconCard: React.FC<React.PropsWithChildren<IconCardProps>> = ({
   icon,
   background,

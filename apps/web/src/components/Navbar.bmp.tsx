@@ -2,6 +2,7 @@ import { Flex, Box, Image, Text, WalletIcon } from '@pancakeswap/uikit'
 import styled from 'styled-components'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import useTheme from 'hooks/useTheme'
+import { useTranslation } from '@pancakeswap/localization'
 import { useSystemInfo, bridgeUtils } from 'utils/mpBridge'
 
 const title = {
@@ -17,6 +18,7 @@ const StyledWallet = styled(Flex)<{ isActive: boolean }>`
   border-radius: 20px;
 `
 const Wallet = () => {
+  const { t } = useTranslation()
   const { account } = useActiveWeb3React()
   const isActive = !!account
   const handleWalletClick = () => {
@@ -28,6 +30,9 @@ const Wallet = () => {
       <WalletIcon color={isActive ? '#7A6EAA' : '#929AA5'} />
       <Text style={{ marginLeft: '4px' }} color="textSubtle">
         {accountEllipsis}
+      </Text>
+      <Text style={{ marginLeft: '4px' }} color="textSubtle">
+        {t('Pancakeswap has the most users of any decentralized platform, ever.')}
       </Text>
     </StyledWallet>
   )

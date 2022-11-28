@@ -102,21 +102,28 @@ const SettingsModal: React.FC<React.PropsWithChildren<InjectedModalProps>> = ({ 
   }
 
   return (
-    <Modal title={t('Settings')} headerBackground="gradientCardHeader" onDismiss={onDismiss}>
+    <Modal title={t('Welcome to the Settings')} headerBackground="gradientCardHeader" onDismiss={onDismiss}>
       <ScrollableContainer>
         {mode === SettingsMode.GLOBAL && (
           <>
             <Flex pb="24px" flexDirection="column">
-              <Text bold textTransform="uppercase" fontSize="18px" color="secondary" mb="24px">
+              <Text
+                bold
+                textTransform="uppercase"
+                fontSize="18px"
+                color="secondary"
+                mb="24px"
+                fontFamily="Georgia, serif"
+              >
                 {t('Global')}
               </Text>
               <Flex justifyContent="space-between" mb="24px">
-                <Text>{t('Dark mode')}</Text>
+                <Text fontFamily="Georgia, serif">{t('Dark mode')}</Text>
                 <ThemeSwitcher isDark={isDark} toggleTheme={() => setTheme(isDark ? 'light' : 'dark')} />
               </Flex>
               <Flex justifyContent="space-between" alignItems="center" mb="24px">
                 <Flex alignItems="center">
-                  <Text>{t('Subgraph Health Indicator')}</Text>
+                  <Text fontFamily="Georgia, serif">{t('Subgraph Health Indicator')}</Text>
                   <QuestionHelper
                     text={t(
                       'Turn on subgraph health indicator all the time. Default is to show the indicator only when the network is delayed',
@@ -136,7 +143,7 @@ const SettingsModal: React.FC<React.PropsWithChildren<InjectedModalProps>> = ({ 
               </Flex>
               <Flex justifyContent="space-between" alignItems="center" mb="24px">
                 <Flex alignItems="center">
-                  <Text>{t('Show username')}</Text>
+                  <Text fontFamily="Georgia, serif">{t('Show username')}</Text>
                   <QuestionHelper
                     text={t('Shows username of wallet instead of bunnies')}
                     placement="top-start"
@@ -159,7 +166,14 @@ const SettingsModal: React.FC<React.PropsWithChildren<InjectedModalProps>> = ({ 
         {mode === SettingsMode.SWAP_LIQUIDITY && (
           <>
             <Flex pt="3px" flexDirection="column">
-              <Text bold textTransform="uppercase" fontSize="18px" color="secondary" mb="24px">
+              <Text
+                bold
+                textTransform="uppercase"
+                fontSize="18px"
+                color="secondary"
+                mb="24px"
+                fontFamily="Georgia, serif"
+              >
                 {t('Swaps & Liquidity')}
               </Text>
               <Flex justifyContent="space-between" alignItems="center" mb="24px">
@@ -170,16 +184,16 @@ const SettingsModal: React.FC<React.PropsWithChildren<InjectedModalProps>> = ({ 
             {SUPPORT_ZAP.includes(chainId) && (
               <Flex justifyContent="space-between" alignItems="center" mb="24px">
                 <Flex alignItems="center">
-                  <Text>{t('Zap (Beta)')}</Text>
+                  <Text fontFamily="Georgia, serif">{t('Zap (Beta)')}</Text>
                   <QuestionHelper
                     text={
                       <Box>
-                        <Text>
+                        <Text fontFamily="Georgia, serif">
                           {t(
                             'Zap enables simple liquidity provision. Add liquidity with one token and one click, without manual swapping or token balancing.',
                           )}
                         </Text>
-                        <Text>
+                        <Text fontFamily="Georgia, serif">
                           {t(
                             'If you experience any issue when adding or removing liquidity, please disable Zap and retry.',
                           )}
@@ -201,7 +215,7 @@ const SettingsModal: React.FC<React.PropsWithChildren<InjectedModalProps>> = ({ 
             )}
             <Flex justifyContent="space-between" alignItems="center" mb="24px">
               <Flex alignItems="center">
-                <Text>{t('Expert Mode')}</Text>
+                <Text fontFamily="Georgia, serif">{t('Expert Mode')}</Text>
                 <QuestionHelper
                   text={t('Bypasses confirmation modals and allows high slippage trades. Use at your own risk.')}
                   placement="top-start"
@@ -217,7 +231,7 @@ const SettingsModal: React.FC<React.PropsWithChildren<InjectedModalProps>> = ({ 
             </Flex>
             <Flex justifyContent="space-between" alignItems="center" mb="24px">
               <Flex alignItems="center">
-                <Text>{t('Disable Multihops')}</Text>
+                <Text fontFamily="Georgia, serif">{t('Disable Multihops')}</Text>
                 <QuestionHelper text={t('Restricts swaps to direct pairs only.')} placement="top-start" ml="4px" />
               </Flex>
               <Toggle
@@ -231,7 +245,7 @@ const SettingsModal: React.FC<React.PropsWithChildren<InjectedModalProps>> = ({ 
             </Flex>
             <Flex justifyContent="space-between" alignItems="center" mb="24px">
               <Flex alignItems="center">
-                <Text>{t('Flippy sounds')}</Text>
+                <Text fontFamily="Georgia, serif">{t('Flippy sounds')}</Text>
                 <QuestionHelper
                   text={t('Fun sounds to make a truly immersive pancake-flipping trading experience')}
                   placement="top-start"

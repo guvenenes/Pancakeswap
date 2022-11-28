@@ -58,7 +58,7 @@ const CompetitionBanner = () => {
               <Text color="invertedContrast" bold fontSize="16px" mr="4px">
                 {t('Trade Now')}
               </Text>
-              <ArrowForwardIcon color="invertedContrast" />
+              <ArrowForwardIcon width="35px" color="invertedContrast" />
             </Button>
           </NextLinkFromReactRouter>
         </S.LeftWrapper>

@@ -7,6 +7,7 @@ import { useGetChainName } from 'state/info/hooks'
 import { useRouter } from 'next/router'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import InfoNav from './components/InfoNav'
+import style from './bgstyles.module.css'
 
 export const InfoPageLayout = ({ children }) => {
   const { address: account } = useAccount()
@@ -21,28 +22,30 @@ export const InfoPageLayout = ({ children }) => {
     if (account && chainId === ChainId.ETHEREUM && router.query.chainName !== 'eth')
       router.replace('/info/eth', undefined, { shallow: true })
   }, [chainId, account, chainName, router])
-
   const isStableSwap = router.query.type === 'stableSwap'
   return (
     <>
-      {chainName === 'BSC' && (
-        <SubMenuItems
-          items={[
-            {
-              label: t('Swap'),
-              href: '/info',
-            },
-            {
-              label: t('StableSwap'),
-              href: '/info?type=stableSwap',
-            },
-          ]}
-          activeItem={isStableSwap ? '/info?type=stableSwap' : '/info'}
-        />
-      )}
+      <div className={style.bg}>
+        {chainName === 'BSC' && (
+          <SubMenuItems
+            className={style.bg}
+            items={[
+              {
+                label: t('Swap'),
+                href: '/info',
+              },
+              {
+                label: t('StableSwap'),
+                href: '/info?type=stableSwap',
+              },
+            ]}
+            activeItem={isStableSwap ? '/info?type=stableSwap' : '/info'}
+          />
+        )}
 
-      <InfoNav isStableSwap={isStableSwap} />
-      {children}
+        <InfoNav isStableSwap={isStableSwap} />
+        {children}
+      </div>
     </>
   )
 }

@@ -23,7 +23,7 @@ const TokensOverview: React.FC<React.PropsWithChildren> = () => {
 
   return (
     <Page>
-      <Heading scale="lg" mb="16px">
+      <Heading textAlign="center" scale="xl" mb="16px">
         {t('Your Watchlist')}
       </Heading>
       {watchListTokens.length > 0 ? (
@@ -36,7 +36,7 @@ const TokensOverview: React.FC<React.PropsWithChildren> = () => {
         </Card>
       )}
       <TopTokenMovers />
-      <Heading scale="lg" mt="40px" mb="16px" id="info-tokens-title">
+      <Heading textAlign="center" scale="xl" mt="40px" mb="16px" id="info-tokens-title">
         {t('All Tokens')}
       </Heading>
       <TokenTable tokenDatas={formattedTokens} />

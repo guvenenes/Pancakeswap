@@ -6,6 +6,7 @@ import { ArrowUpIcon } from "../Svg";
 
 const FixedContainer = styled.div`
   position: fixed;
+  color: red;
   right: 5%;
   bottom: calc(110px + env(safe-area-inset-bottom));
 `;
@@ -39,12 +40,7 @@ const ScrollToTopButtonV2 = () => {
 
   return (
     <FixedContainer style={{ display: visible ? "inline" : "none" }}>
-      <Button
-        width={48}
-        height={48}
-        endIcon={<ArrowUpIcon color="invertedContrast" style={{ marginLeft: 0 }} />}
-        onClick={scrollToTop}
-      />
+      <Button width={48} height={48} endIcon={<ArrowUpIcon style={{ marginLeft: 0 }} />} onClick={scrollToTop} />
     </FixedContainer>
   );
 };

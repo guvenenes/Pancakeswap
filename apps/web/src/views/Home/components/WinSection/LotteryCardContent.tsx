@@ -84,7 +84,7 @@ const LotteryCardContent = () => {
             <Text bold color="invertedContrast">
               {t('Buy Tickets')}
             </Text>
-            <ArrowForwardIcon ml="4px" color="invertedContrast" />
+            <ArrowForwardIcon width="35px" ml="4px" color="invertedContrast" />
           </Button>
         </StyledLink>
       </Flex>

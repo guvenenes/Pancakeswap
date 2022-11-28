@@ -20,7 +20,9 @@ const Text = styled.div<TextProps>`
     ellipsis &&
     `white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;`}
+    text-overflow: ellipsis;
+    font-family: Georgia, serif;
+    `}
 
   ${space}
   ${typography}

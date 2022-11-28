@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styled from 'styled-components'
 import { Aptos, AptosXPancakeSwap } from './images'
 import * as S from './Styled'
+import styles from '../mystyles.module.css'
 
 const RightWrapper = styled.div`
   position: absolute;
@@ -54,11 +55,12 @@ const AptosBanner = () => {
       <S.Inner>
         <S.LeftWrapper>
           <Box>
-            <Image src={AptosXPancakeSwap} alt="aptosXPancakeSwapImage" width={211} height={18} placeholder="blur" />
+            <Image src={AptosXPancakeSwap} alt="aptosXPancakeSwapImage" width={250} height={25} placeholder="blur" />
           </Box>
           <AptosTitle>{t('Hello Aptos Project Teams!')}</AptosTitle>
 
           <Button
+            className={styles.button}
             minHeight="48px"
             onClick={() =>
               window?.open('https://docs.pancakeswap.finance/aptos-deployment', '_blank', 'noopener noreferrer')
@@ -67,7 +69,7 @@ const AptosBanner = () => {
             <Text color="invertedContrast" bold fontSize="16px" mr="4px">
               👋 {t('Get in Touch')}
             </Text>
-            <OpenNewIcon color="invertedContrast" />
+            <OpenNewIcon width="30px" color="invertedContrast" />
           </Button>
         </S.LeftWrapper>
         <RightWrapper>

@@ -16,9 +16,11 @@ import Logo from "./components/Logo";
 import { MENU_HEIGHT, MOBILE_MENU_HEIGHT, TOP_BANNER_HEIGHT, TOP_BANNER_HEIGHT_MOBILE } from "./config";
 import { MenuContext } from "./context";
 import { NavProps } from "./types";
+import GradientLogo from "./GradientLogoSvg";
 
 const Wrapper = styled.div`
   position: relative;
+
   width: 100%;
   display: grid;
   grid-template-rows: auto 1fr;
@@ -144,7 +146,8 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
             {banner && isMounted && <TopBannerContainer height={topBannerHeight}>{banner}</TopBannerContainer>}
             <StyledNav>
               <Flex>
-                <Logo href={homeLink?.href ?? "/"} />
+                {/* <Logo href={homeLink?.href ?? "/"} /> */}
+                <GradientLogo href={homeLink?.href ?? "/"} mb="-45px" width="75px" ml="30px" mr="-50px" />
                 <AtomBox display={{ xs: "none", md: "block" }}>
                   <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" />
                 </AtomBox>

@@ -38,7 +38,8 @@ const Menu = styled.div`
   padding: 1.5rem;
   padding-bottom: 2.5rem;
   position: absolute;
-  background: ${({ theme }) => theme.colors.background};
+  background: background: rgb(25, 93, 128);
+  background: linear-gradient(73deg, rgba(25, 93, 128, 0.9752275910364145) 0%, rgba(28, 59, 150, 1) 100%);
   border-radius: 8px;
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04),
     0px 24px 32px rgba(0, 0, 0, 0.04);
@@ -298,7 +299,7 @@ const Search = () => {
                 </Text>
               )}
               {!isXs && !isSm && (
-                <Text textAlign="end" fontSize="12px">
+                <Text textAlign="end" style={{ color: 'red' }} fontSize="12px">
                   {t('Volume 24H')}
                 </Text>
               )}

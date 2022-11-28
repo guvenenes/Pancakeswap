@@ -3,6 +3,7 @@ import { useIsMounted } from "@pancakeswap/hooks";
 import React from "react";
 import { Box, Flex } from "../Box";
 import { Link } from "../Link";
+import GradientLogo from "./GradientLogoSvg";
 import {
   StyledFooter,
   StyledIconMobileContainer,
@@ -76,7 +77,7 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
             </StyledList>
           ))}
           <Box display={["none", null, "block"]}>
-            <LogoWithTextIcon width="160px" />
+            <GradientLogo width="160px" />
           </Box>
         </Flex>
         <StyledSocialLinks order={[2]} pb={["42px", null, "32px"]} mb={["0", null, "32px"]} />
@@ -85,11 +86,12 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
           order={[1, null, 3]}
           flexDirection={["column", null, "row"]}
           justifyContent="space-between"
+          mt="-50px"
         >
           <Flex order={[2, null, 1]} alignItems="center">
-            <SkeletonV2 variant="round" width="56px" height="32px" isDataReady={isMounted}>
+            {/* <SkeletonV2 variant="round" width="56px" height="32px" isDataReady={isMounted}>
               <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} />
-            </SkeletonV2>
+            </SkeletonV2> */}
             <LangSelector
               currentLang={currentLang}
               langs={langs}
@@ -98,17 +100,18 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
               dropdownPosition="top-right"
             />
           </Flex>
-          <Flex order={[1, null, 2]} mb={["24px", null, "0"]} justifyContent="space-between" alignItems="center">
-            <Box mr="20px">
-              <CakePrice cakePriceUsd={cakePriceUsd} color="textSubtle" />
+          <Flex order={[1, null, 2]} justifyContent="space-between" alignItems="center">
+            <Box>
+              <GradientLogo width="100px" mt="60px" mr="-30px" />
             </Box>
             <Button
-              data-theme={isDark ? "dark" : "light"}
+              style={{ background: "black", color: "white" }}
+              // data-theme={isDark ? "dark" : "light"}
               as="a"
               href="https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82&chainId=56"
               target="_blank"
               scale="sm"
-              endIcon={<ArrowForwardIcon color="backgroundAlt" />}
+              endIcon={<ArrowForwardIcon style={{ height: "30px" }} color="white" />}
             >
               {buyCakeLabel}
             </Button>

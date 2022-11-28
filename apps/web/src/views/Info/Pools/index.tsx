@@ -22,7 +22,7 @@ const PoolsOverview: React.FC<React.PropsWithChildren> = () => {
 
   return (
     <Page>
-      <Heading scale="lg" mb="16px">
+      <Heading textAlign="center" scale="xl" mb="16px">
         {t('Your Watchlist')}
       </Heading>
       <Card>
@@ -34,7 +34,7 @@ const PoolsOverview: React.FC<React.PropsWithChildren> = () => {
           </Text>
         )}
       </Card>
-      <Heading scale="lg" mt="40px" mb="16px" id="info-pools-title">
+      <Heading textAlign="center" scale="xl" mt="40px" mb="16px" id="info-pools-title">
         {t('All Pairs')}
       </Heading>
       <PoolTable poolDatas={poolDatas} />

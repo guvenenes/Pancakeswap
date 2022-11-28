@@ -29,6 +29,7 @@ export const StyledAnimatedIconComponent = styled.div<{
       left: 0;
       bottom: 0;
       overflow:hidden;
+      
     }
 
     div:last-child {

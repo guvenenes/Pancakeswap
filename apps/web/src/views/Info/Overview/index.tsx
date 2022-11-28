@@ -81,7 +81,7 @@ const Overview: React.FC<React.PropsWithChildren> = () => {
           </MessageText>
         </Message>
       )}
-      <Heading scale="lg" mb="16px" id="info-overview-title">
+      <Heading scale="xl" textAlign="center" mb="16px" id="info-overview-title">
         {t('PancakeSwap Info & Analytics')}
       </Heading>
       <ChartCardsContainer>
@@ -106,15 +106,15 @@ const Overview: React.FC<React.PropsWithChildren> = () => {
           />
         </Card>
       </ChartCardsContainer>
-      <Heading scale="lg" mt="40px" mb="16px">
+      <Heading textAlign="center" scale="xl" mt="40px" mb="16px">
         {t('Top Tokens')}
       </Heading>
       <TokenTable tokenDatas={formattedTokens} />
-      <Heading scale="lg" mt="40px" mb="16px">
+      <Heading textAlign="center" scale="xl" mt="40px" mb="16px">
         {t('Top Pairs')}
       </Heading>
       <PoolTable poolDatas={poolDatas} loading={somePoolsAreLoading} />
-      <Heading scale="lg" mt="40px" mb="16px">
+      <Heading textAlign="center" scale="xl" mt="40px" mb="16px">
         {t('Transactions')}
       </Heading>
       <TransactionTable transactions={transactions} />
